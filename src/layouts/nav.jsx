@@ -62,7 +62,7 @@ function Nav() {
         {links.map((link) => {
           return (
             <li key={link.id}>
-              <NavLink to={`/${link.path}`}>
+              <NavLink to={link.path ? `/${link.path}` : "/"} end={link.path === ""}>
                 <i className={link.icon}></i>
                 <span>{link.pageName}</span>
               </NavLink>

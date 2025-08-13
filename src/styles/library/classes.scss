@@ -41,6 +41,11 @@
   border: none;
 }
 
+.btn-blue { @extend .btn; background-color: $blue; }
+.btn-green { @extend .btn; background-color: $green; }
+.btn-red { @extend .btn; background-color: $red; }
+.btn-orange { @extend .btn; background-color: $orange; }
+
 // colors:
 $colors: (
   "red": $red,

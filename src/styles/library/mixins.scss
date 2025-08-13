@@ -163,3 +163,72 @@
     left: 4px;
   }
 }
+
+// New: unified checkbox style
+@mixin checkbox-control($size: 14px){
+  input{ display: none; }
+  label{
+    padding-left: calc(#{$size} + 16px);
+    cursor: pointer;
+    position: relative;
+    &::before,
+    &::after{
+      @include ele($size, $size, null);
+      margin-top: calc(-1 * (#{$size} / 2 + 2px));
+      border-radius: 4px;
+      top: 50%;
+      left: 0;
+      transition: 0.3s;
+    }
+    &::before{ border: 2px solid $grey; }
+    &::after{
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      font-size: calc(#{$size} - 2px);
+      color: $widget-bg;
+      background-color: $blue;
+      border: 2px solid $blue;
+      transform: scale(0);
+      display: grid;
+      place-items: center;
+    }
+  }
+  input:checked + label::after{ transform: scale(1) rotate(360deg); }
+}
+
+// New: unified radio style
+@mixin radio-control($outer: 18px, $inner: 12px){
+  input{ display: none; }
+  label{
+    padding-left: calc(#{$outer} + 12px);
+    cursor: pointer;
+    position: relative;
+    &::before{
+      content: "";
+      width: $outer;
+      height: $outer;
+      border: 2px solid $grey;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      transition: 0.3s;
+    }
+    &::after{
+      content: "";
+      width: $inner;
+      height: $inner;
+      background-color: $blue;
+      border-radius: 50%;
+      position: absolute;
+      top: calc(50% - #{$inner} / 2);
+      left: calc(#{$outer}/2 - #{$inner}/2);
+      transform: scale(0);
+      transition: 0.3s;
+    }
+  }
+  input:checked + label::before{ border-color: $blue; }
+  input:checked + label::after{ transform: scale(1); }
+}

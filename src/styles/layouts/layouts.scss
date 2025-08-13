@@ -42,7 +42,7 @@
     text-transform: capitalize;
     transition: 0.3s;
     &.active {
-      background-color: #f6f6f6;
+      background-color: var(--nav-active-bg, #f6f6f6);
     }
     i {
       margin-right: 10px;
@@ -52,7 +52,7 @@
       font-size: 14px;
     }
     &:hover {
-      background-color: #f6f6f6;
+      background-color: var(--nav-hover-bg, #f6f6f6);
     }
   }
 }
@@ -121,6 +121,7 @@ header {
   .icons {
     display: flex;
     align-items: center;
+    gap: 10px;
     .notifications {
       position: relative;
       &::before {

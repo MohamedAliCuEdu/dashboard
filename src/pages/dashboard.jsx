@@ -69,7 +69,7 @@ function Dashboard() {
                 <p>elzero</p>
               </div>
               <img
-                clas="avatar"
+                className="avatar"
                 src={require("../imgs/welcome.png")}
                 alt="welcome"
               />

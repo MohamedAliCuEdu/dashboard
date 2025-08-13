@@ -76,7 +76,7 @@ function Courses() {
                   <span>
                     <i className="fa-regular fa-user"></i> {price}
                   </span>
-                  <Link to={`/courses/:${courseName}`}>
+                  <Link to={`/courses/:${encodeURIComponent(courseName)}`}>
                     <button className="btn-blue">course info</button>
                   </Link>
                   <span>
