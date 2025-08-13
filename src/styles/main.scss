@@ -1,6 +1,34 @@
 @use './library/variables.scss' as *;
 @use './library/mixins.scss' as *;
 
+:root{
+  --body-bg: #f1f5f9;
+  --widget-bg: #ffffff;
+  --input-bg: #eeeeee;
+  --bg-grey: #eeeeee;
+  --main-fc: #000000;
+  --alt-fc: #888888;
+  --border-ccc: #cccccc;
+  --border-ddd: #dddddd;
+  --border-eee: #eeeeee;
+  --nav-hover-bg: #f6f6f6;
+  --nav-active-bg: #f6f6f6;
+}
+
+[data-theme="dark"]{
+  --body-bg: #0b1220;
+  --widget-bg: #101826;
+  --input-bg: #1a2436;
+  --bg-grey: #1a2436;
+  --main-fc: #e6edf3;
+  --alt-fc: #a1aec6;
+  --border-ccc: #2b3a55;
+  --border-ddd: #2b3a55;
+  --border-eee: #223047;
+  --nav-hover-bg: #101c2f;
+  --nav-active-bg: #0e192a;
+}
+
 // import open sans font:
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
 // global >> scrollbar >> page

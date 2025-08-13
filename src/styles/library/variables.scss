@@ -1,12 +1,12 @@
 // backgrounds color:
-$body-bg: #f1f5f9;
-$widget-bg: white;
-$input-bg: #eee;
-$bg-grey: #eee;
+$body-bg: var(--body-bg, #f1f5f9);
+$widget-bg: var(--widget-bg, #ffffff);
+$input-bg: var(--input-bg, #eeeeee);
+$bg-grey: var(--bg-grey, #eeeeee);
 
 // fonts color:
-$main-fc: black;
-$alt-fc: #888;
+$main-fc: var(--main-fc, #000000);
+$alt-fc: var(--alt-fc, #888888);
 
 // colors:
 $blue: #0075ff;
@@ -18,7 +18,6 @@ $grey: #888;
 $alt-grey: #eee;
 
 // border-colors:
-
-$border-ccc: #ccc;
-$border-ddd: #ddd;
-$border-eee: #eee;
+$border-ccc: var(--border-ccc, #cccccc);
+$border-ddd: var(--border-ddd, #dddddd);
+$border-eee: var(--border-eee, #eeeeee);

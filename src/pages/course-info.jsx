@@ -106,7 +106,7 @@ function CourseInfo() {
                     Description
                   </NavLink>
                   <NavLink to="unites">Unites</NavLink>
-                  <NavLink to="Tasks">Tasks</NavLink>
+                  <NavLink to="tasks">Tasks</NavLink>
                 </nav>
                 <div className="content">
                   <Outlet />

@@ -137,39 +137,7 @@
 /*-----widgets-control-----*/
 .widgets-control .check{
   margin: 0 0 15px;
-  input{
-    display: none;
-  }
-  label{
-    padding-left: 30px;
-    cursor: pointer;
-    position: relative;
-    &::before,
-    &::after{
-      @include ele(14px, 14px, null);
-      margin-top: -9px;
-      border-radius: 4px;
-      top: 50%;
-      left: 0;
-      transition: 0.3s;
-    }
-    &::before{
-      border: 2px solid $grey;
-    }
-    &::after{
-      content: "\f00c";
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      font-size: 12px;
-      color: $widget-bg;
-      background-color: $blue;
-      border: 2px solid $blue;
-      transform: scale(0);
-    }
-  }
-  input:checked + label::after{
-    transform: scale(1) rotate(360deg);
-  }
+  @include checkbox-control(14px);
 }
 /*-----widgets-control-----*/
 /*-----backup-----*/
@@ -178,44 +146,7 @@
     margin-bottom: 15px;
     div{
       margin-bottom: 15px;
-      input{
-        display: none;
-      }
-      label{
-        padding-left: 30px;
-        cursor: pointer;
-        position: relative;
-        &::before{
-          content: "";
-          width: 18px;
-          height: 18px;
-          border: 2px solid $grey;
-          border-radius: 50%;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          left: 0;
-          transition: 0.3s;
-        }
-        &::after{
-          content: "";
-          width: 12px;
-          height: 12px;
-          background-color: $blue;
-          border-radius: 50%;
-          position: absolute;
-          top: 5px;
-          left: 5px;
-          transform: scale(0);
-          transition: 0.3s;
-        }
-      }
-      input:checked + label::before{
-        border-color: $blue;
-      }
-      input:checked + label::after{
-        transform: scale(1);
-      }
+      @include radio-control(18px, 12px);
     }
   }
   .servers{

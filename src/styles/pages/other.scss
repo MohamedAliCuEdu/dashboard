@@ -57,7 +57,7 @@
       justify-content: space-between;
       align-items: center;
       .load {
-        @include load(260px, 8px, #eee, null, null);
+        @include load(260px, 8px, $input-bg, null, null);
 
         div {
           border-radius: 6px;
@@ -182,7 +182,7 @@
       top: 10px;
       left: 10px;
       i {
-        @include icon-circle(33px, #eee, #666);
+        @include icon-circle(33px, $input-bg, #666);
         display: inline-flex;
         font-size: 13px;
         transition: 0.3s;
